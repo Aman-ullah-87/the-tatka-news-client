@@ -3,6 +3,7 @@ import logo from "../../assets/logo.png";
 import moment from "moment";
 import { Button, Container,Navbar,Nav } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
       </div>
       <div className="d-flex">
         <Button variant="danger">Danger</Button>
-        <Marquee speed={70}>
+        <Marquee className="text-success" speed={70}>
           Match Highlights: Germany vs Spain — as it happened ! Match
           Highlights: Germany vs Spain as...
         </Marquee>
@@ -27,8 +28,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Link to='/category/0' className=" text-decoration-none me-2" >Home</Link>
+            <Link to='/about' className=" text-decoration-none me-2" >About</Link>
+            
           
           </Nav>
           <Nav>

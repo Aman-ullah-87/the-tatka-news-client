@@ -4,9 +4,10 @@ const LeftNav = () => {
     const [categories,setCategories]=useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:7000/categories')
+        fetch('http://localhost:7000/categories/')
         .then(res=>res.json())
         .then(data=>setCategories(data))
+      
     },[])
     return (
         <div>
