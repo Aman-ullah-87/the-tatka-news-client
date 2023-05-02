@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logo.png";
 import moment from "moment";
-import { Button, Container,Navbar,Nav } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import NavigateBar from "./NavigateBar";
 
 const Header = () => {
   return (
@@ -22,26 +22,7 @@ const Header = () => {
           Highlights: Germany vs Spain as...
         </Marquee>
       </div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
-      
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto">
-            <Link to='/category/0' className=" text-decoration-none me-2" >Home</Link>
-            <Link to='/about' className=" text-decoration-none me-2" >About</Link>
-            
-          
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <NavigateBar/>
     </Container>
   );
 };
